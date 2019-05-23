@@ -1,15 +1,32 @@
-f = open('list1.txt')
-f1 = open('output.txt', 'a')
+#https://stackoverflow.com/questions/15343743/copying-from-one-text-file-to-another-using-python
+fin = open('book1.txt')
+fout = open('copy1.txt', 'w')
 
-Copythefileline=False
+count = 0
 
-for line in f.readlines():
+page = 0
 
-    if 'tests/file/myword' in line:
-        Copythefileline=True
+for y in range(page):
+	for i,val in enumerate(fin):
+		s= val.strip("/n")
+		for  j in s:
+			print(j)
+			if j == 'o' or j =='o':
+				h = 'o'
+				fou.write(h)
+				elif j =='e' or j =='E'
+					h = '3'
+					fout.write(h)
+				elif j == 'i' or j == 'I'
+					h = '1'
+					fout.write(h)
+				else:
+					fout.write(j)
 
-    if Copythefileline:
-        f1.write(line)
+				fout.write('/n')
+				print(s)
+				count +=1
+				if count==25:
+					break
 
-f1.close()
-f.close()
+
